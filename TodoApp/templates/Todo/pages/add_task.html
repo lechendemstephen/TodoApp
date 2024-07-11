@@ -3,6 +3,7 @@
 <section class="pb-4">
     <div class="border rounded-5">
         <h2 class="text-center">Add Task</h2>
+        {% include 'Todo/includes/alerts.html' %}
         <section class="w-100 p-4 d-flex justify-content-center pb-4">
           <form style="width: 26rem;" action="" method="POST">
             {% csrf_token %}
