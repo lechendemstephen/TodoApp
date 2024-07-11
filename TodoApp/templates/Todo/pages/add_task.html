@@ -1,0 +1,69 @@
+{% extends 'Todo/includes/base.html' %}
+{% block content %}
+<section class="pb-4">
+    <div class="border rounded-5">
+        <h2 class="text-center">Add Task</h2>
+        <section class="w-100 p-4 d-flex justify-content-center pb-4">
+          <form style="width: 26rem;" action="" method="POST">
+            {% csrf_token %}
+            <!-- Name input -->
+            <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+              <input type="text" id="form4Example1" class="form-control" name="title">
+              <label class="form-label" for="form4Example1" style="margin-left: 0px;">Title</label>
+            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
+  
+            <!-- Email input -->
+          
+  
+            <!-- Message input -->
+            <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+              <textarea class="form-control" id="form4Example3" rows="4" name='task'></textarea>
+              <label class="form-label" for="form4Example3" style="margin-left: 0px;">Task</label>
+            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
+            {% comment %} Date Picker {% endcomment %}
+            <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+                <input id="startDate" class="form-control" type="date" name="dead_line" />
+                <label for="startDate">Dead Line</label>
+            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-4">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked="">
+              <label class="form-check-label" for="form4Example4">
+                Email copy of this task
+              </label>
+            </div>
+
+           
+  
+            <!-- Submit button -->
+            <button data-mdb-ripple-init="" type="submit" class="btn btn-primary btn-block mb-4">Add</button>
+          </form>
+        </section>
+        
+      
+      
+      <div class="p-4 text-center border-top mobile-hidden">
+        <a class="btn btn-link px-3 collapsed" data-mdb-collapse-init="" href="#example4" role="button" aria-expanded="false" aria-controls="example4" data-ripple-color="hsl(0, 0%, 67%)">
+          <i class="fas fa-code me-md-2"></i>
+          <span class="d-none d-md-inline-block">
+            Show code
+          </span>
+        </a>
+        
+        
+          <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+            <i class="fas fa-file-code me-md-2 pe-none"></i>
+            <span class="d-none d-md-inline-block export-to-snippet pe-none">
+              Edit in sandbox
+            </span>
+          </a>
+        
+      </div>
+      
+      
+    </div>
+  </section>
+
+
+
+{% endblock %}

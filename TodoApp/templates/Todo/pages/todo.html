@@ -1,0 +1,29 @@
+{% extends "Todo/includes/base.html" %}
+{% block content %}
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Num</th>
+        <th scope="col">Title</th>
+        <th scope="col">Task</th>
+        <th scope="col">Dealine</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for task in tasks %}
+        <th scope="row">{{ task.id }}</th>
+        <td>{{ task.title }}</td>
+        <td>{{ task.task }}</td>
+        <td>{{ task.dead_line}}</td>
+       <td>  <a href="#" ><span class="badge text-bg-success rounded-pill">Completed</span> </a></td>
+      <td>  <a href="#" ><span class="badge text-bg-danger rounded-pill">Delete</span> </a></td>
+        <td>  <a href="#" ><span class="badge text-bg-info rounded-pill">Update</span></a></td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+  <hr>
+ 
+{% endblock %}
